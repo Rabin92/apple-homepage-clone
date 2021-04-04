@@ -18,6 +18,9 @@
 
 ### Links
 
+- Solution URL: [View Code](https://github.com/Rabin92/apple-homepage-clone/tree/main)
+- Live Site URL: [Go Live](https://apple-homepage-clone.vercel.app)
+
 ## My process
 
 ### Built with
