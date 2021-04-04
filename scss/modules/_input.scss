@@ -1,0 +1,43 @@
+// ==========================================================================
+// Input
+// ==========================================================================
+
+.search-container {
+  font-size: 1.0625rem;
+  line-height: 1.23536;
+  letter-spacing: -0.022em;
+  position: absolute;
+  z-index: 1;
+  top: 60px;
+  right: 0;
+  left: 0;
+  padding: 0 em(10px);
+  display: none;
+
+  @media #{$break--m} {
+    position: initial;
+    background-color: initial;
+  }
+
+  &::after {
+    @include border;
+
+    @media #{$break--m} {
+      display: none;
+    }
+  }
+}
+
+input[type='text'] {
+  padding: 0.45em;
+  width: 100%;
+  background-color: rgba(159, 159, 159, 0.2);
+  margin-bottom: em(10px);
+  color: $white;
+  border-radius: 5px;
+  padding-left: em(35px);
+
+  @media #{$break--m} {
+    display: none;
+  }
+}

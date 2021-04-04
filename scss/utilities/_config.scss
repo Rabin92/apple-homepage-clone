@@ -1,0 +1,61 @@
+// ==========================================================================
+// Global Config
+// ==========================================================================
+
+// Font Stacks
+$font-url--primary: 'https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap';
+$font-family--primary: 'Roboto', sans-serif;
+
+// Font Weights
+$font-weight--light: 300;
+$font-weight--regular: 400;
+$font-weight--medium: 500;
+$font-weight--bold: 700;
+
+// Descriptive Base Colors
+$white: #fff;
+$black: #000;
+$shipGray: #424245;
+$whisper: #fbfbfd;
+$clayAsh: #c0c9ba;
+$dawn: #aba79c;
+$jumbo: #86868b;
+$shark: #1d1d1f;
+$athensGray: #f5f5f7;
+$abbey: #515154;
+$mischka: #d2d2d7;
+$conflowerBlue: #06c;
+$dodgerblue: #2997ff;
+
+// Color Usage
+$nav--col: rgba(0, 0, 0, 0.8);
+$border-line: $shipGray;
+$ribbon--col: $athensGray;
+$price--col: #86868b;
+$link--col: $conflowerBlue;
+$airpod-pro--background: $clayAsh;
+$promo--background: $dawn;
+$footer-bck: $athensGray;
+$global-footer--col: $shark;
+$global-footer-link--col: $abbey;
+$global-footer-link--hover: $shark;
+$footer-border--col: $mischka;
+
+// Text
+$base__font-size: 16px;
+$base__line: 24px;
+$text--center: center;
+
+// Cursor
+$cursor: pointer;
+
+// Path to Assets
+$path--rel: '../images';
+
+// Gutters
+$gutters: 1em;
+
+// Media queries
+$break--m: '(min-width: 45.9375em)';
+$break--l: '(min-width: 64em)';
+$break--xl: '(min-width: 75em)';

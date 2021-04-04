@@ -1,0 +1,214 @@
+// ==========================================================================
+// Footer
+// ==========================================================================
+
+.footer {
+  padding: 0 $gutters;
+  font-size: 0.8125rem;
+  padding-bottom: calc(2em - 10px);
+}
+
+/* ************************** GLOBAL FOOTER STYLES ************************** */
+
+.global-footer {
+  color: $jumbo;
+}
+
+.global-footer-link {
+  color: $global-footer-link--col;
+
+  &:hover {
+    text-decoration: underline;
+    color: $global-footer-link--hover;
+  }
+}
+
+/* ************************** TERMS AND CONDITIONS ************************** */
+
+.tc {
+  letter-spacing: -0.01em;
+  border-bottom: 1px solid $footer-border--col;
+  padding: 17px 0 11px;
+
+  @include e(item) {
+    padding-bottom: em(10px);
+  }
+}
+
+/* ******************************** DIRECTORY ******************************* */
+
+.directory {
+  padding-top: em(20px);
+
+  @media #{$break--m} {
+    @include flexy($a-items: null);
+  }
+
+  @include e(column) {
+    color: $global-footer--col;
+
+    @media #{$break--m} {
+      flex-basis: 25%;
+    }
+  }
+
+  @include e(body) {
+    border-bottom: 1px solid $footer-border--col;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+
+    @media #{$break--m} {
+      border-bottom: none;
+      margin-top: 1.5rem;
+    }
+  }
+
+  @include e(input) {
+    display: none;
+
+    &:checked {
+      + .directory__label span {
+        &::after {
+          transform: rotate(45deg) scale(1.08);
+          transition: transform 300ms ease;
+        }
+      }
+
+      ~ .directory__list {
+        position: static;
+        visibility: visible;
+        transform: none;
+        transition: transform 300ms ease;
+      }
+    }
+  }
+
+  @include e(title) {
+    cursor: $cursor;
+    padding: 10px 0 10px;
+    font-size: 0.875rem;
+    display: block;
+    background-color: $athensGray;
+    position: relative;
+    z-index: 2;
+
+    @media #{$break--m} {
+      cursor: default;
+      font-weight: $font-weight--regular;
+    }
+
+    &::after {
+      content: '+';
+      float: right;
+      font-size: 0.875rem;
+      margin: 2px 8px 0 0;
+      transition: transform 300ms ease;
+
+      @media #{$break--m} {
+        display: none;
+      }
+    }
+  }
+
+  @include e(list) {
+    position: absolute;
+    visibility: hidden;
+    z-index: -1;
+    transform: translateY(-100px);
+
+    @media #{$break--m} {
+      overflow: initial;
+      visibility: visible;
+      position: static;
+      transform: none;
+    }
+  }
+
+  @include e(item) {
+    margin-bottom: 0.8em;
+    padding: 2px 14px;
+
+    @media #{$break--m} {
+      padding: initial;
+    }
+
+    a {
+      color: $global-footer-link--col;
+    }
+  }
+}
+
+/* ****************************** FOOTER BOTTOM ***************************** */
+
+.footer-bottom {
+  padding-top: em(34px);
+
+  @include e(shop) {
+    margin-bottom: em(7px);
+    padding-bottom: em(8px);
+
+    @media #{$break--l} {
+      border-bottom: 1px solid $footer-border--col;
+    }
+
+    > a {
+      color: $link--col;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  @include e(link) {
+    border-right: 1px solid $footer-border--col;
+    display: inline-block;
+    margin: em(5px) em(7px) 0 0;
+    padding-right: em(10px);
+
+    &:last-child {
+      border: none;
+    }
+  }
+
+  @include e(copyright) {
+    color: $jumbo;
+
+    @media #{$break--xl} {
+      float: left;
+      margin-right: em(100px);
+      margin-top: 5px;
+    }
+  }
+
+  @include e(locale) {
+    padding-bottom: em(5px);
+
+    @include flexy();
+
+    &::before {
+      content: '';
+      background: url('../icons/uk_flag_icon.png') center no-repeat;
+      background-size: 15px;
+      display: inline-block;
+      height: 20px;
+      width: 20px;
+      padding-right: 8px;
+    }
+
+    @media #{$break--m} {
+      float: right;
+      padding-bottom: initial;
+      padding-top: em(4px);
+    }
+  }
+
+  @include e(legal) {
+    padding-top: em(12px);
+
+    @media #{$break--m} {
+      padding-top: initial;
+    }
+  }
+}

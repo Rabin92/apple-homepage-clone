@@ -1,0 +1,49 @@
+// ==========================================================================
+// Icons
+// ==========================================================================
+
+ion-icon {
+  pointer-events: none;
+}
+
+.icon {
+  fill: $white;
+  height: 20px;
+  opacity: 0.8;
+
+  &:hover {
+    opacity: 1;
+    transition: opacity 300ms ease-in-out;
+  }
+}
+
+.icon-search-container {
+  position: relative;
+
+  @media #{$break--m} {
+    position: initial;
+  }
+}
+
+.icon-search {
+  position: absolute;
+  top: 6px;
+  left: 5px;
+  font-size: em(22px);
+  opacity: 0.5;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  @media #{$break--m} {
+    position: initial;
+    opacity: 0.8;
+    font-size: em(20px);
+    cursor: $cursor;
+
+    &:hover {
+      opacity: initial;
+    }
+  }
+}

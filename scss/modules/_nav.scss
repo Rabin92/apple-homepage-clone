@@ -1,0 +1,79 @@
+// ==========================================================================
+// Nav
+// ==========================================================================
+
+.nav {
+  font-weight: $font-weight--regular;
+  position: absolute;
+  top: 47.3px;
+  right: 0;
+  left: 0;
+  overflow: hidden;
+
+  @media #{$break--m} {
+    font-size: 0.875rem;
+    position: initial;
+    width: 70%;
+  }
+
+  @include e(list) {
+    position: relative;
+    margin-top: 3em;
+    padding: $gutters;
+
+    @media #{$break--m} {
+      position: initial;
+      margin-top: initial;
+      padding: initial;
+
+      @include flexy($j-content: space-between, $a-items: null);
+    }
+  }
+
+  @include e(item) {
+    padding: em(6px) em(20px);
+
+    &::before {
+      @include border;
+      margin-bottom: em(8px);
+
+      @media #{$break--m} {
+        display: none;
+      }
+    }
+
+    @include m(border) {
+      &::before {
+        content: '';
+        display: none;
+      }
+    }
+
+    > a {
+      opacity: 0.8;
+      display: block;
+
+      &:hover {
+        opacity: 1;
+        transition: opacity 300ms ease-in-out;
+      }
+    }
+  }
+}
+
+@keyframes slideDownNav {
+  0% {
+    transform: scale(1.2) translateY(-10px);
+  }
+  100% {
+    height: 100vh;
+    background-color: $black;
+  }
+}
+
+@keyframes slideUpNav {
+  0% {
+    height: 100vh;
+    background-color: $black;
+  }
+}

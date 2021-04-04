@@ -1,0 +1,347 @@
+// ==========================================================================
+// Main
+// ==========================================================================
+
+.main {
+  cursor: $cursor;
+  background-color: #fbfbfd;
+
+  @include flexy($a-items: null, $j-content: center, $f-dir: column);
+}
+
+/* ********************************** HERO ********************************** */
+
+.hero {
+  text-align: $text--center;
+  margin-top: em(15px);
+
+  @include m(background) {
+    background-color: $black;
+  }
+
+  @include e(content) {
+    margin-top: em(30px);
+
+    @include m(reverse) {
+      @include flexy($f-dir: column-reverse, $a-items: null);
+
+      @media #{$break--m} {
+        flex-direction: column;
+      }
+    }
+  }
+
+  @include e(headline) {
+    font-size: 2rem;
+    font-weight: $font-weight--medium;
+    letter-spacing: 0.004em;
+
+    @include m(col) {
+      color: $white;
+    }
+
+    @include m(display) {
+      display: none;
+
+      @media #{$break--m} {
+        display: block;
+      }
+    }
+
+    @media #{$break--m} {
+      font-size: 3rem;
+    }
+
+    @media #{$break--l} {
+      font-size: 3.5rem;
+    }
+  }
+
+  @include e(subhead) {
+    font-size: 1.1875rem;
+    font-weight: $font-weight--regular;
+
+    @include m(col) {
+      color: $white;
+    }
+
+    @media #{$break--m} {
+      font-size: 1.5rem;
+    }
+
+    @media #{$break--l} {
+      font-size: 1.75rem;
+    }
+  }
+
+  @include e(price) {
+    font-size: 1.0625rem;
+    font-weight: $font-weight--regular;
+    line-height: 1.42859;
+    letter-spacing: -0.016em;
+    color: $price--col;
+
+    @media #{$break--m} {
+      font-size: 1.0625rem;
+    }
+  }
+}
+
+.cta--links {
+  margin-top: em(20px);
+
+  .dark-theme-link {
+    font-size: em(21px);
+
+    &-col {
+      color: $dodgerblue;
+    }
+  }
+
+  > a {
+    color: $link--col;
+    font-size: 1.0625rem;
+    font-weight: $font-weight--regular;
+    line-height: 1.21053;
+
+    &::after {
+      content: '>';
+      padding-left: 0.3em;
+      display: inline-block;
+    }
+
+    &:hover {
+      display: inline-block;
+      text-decoration: underline;
+    }
+
+    + a {
+      padding-left: em(20px);
+    }
+  }
+
+  .arrow-hide {
+    &::after {
+      display: none;
+    }
+  }
+
+  .icon-after {
+    &::after {
+      content: '\2197';
+      display: inline-block;
+      color: $link--col;
+    }
+
+    &-pr {
+      padding-right: em(20px);
+    }
+  }
+
+  .play-icon-after {
+    color: $white;
+
+    &::after {
+      @extend %play-icon;
+
+      background: url('../icons/play-circle.svg') center no-repeat;
+    }
+
+    &-outline::after {
+      @extend %play-icon;
+
+      background: url('../icons/play-icon-outline.svg') center no-repeat;
+    }
+  }
+}
+
+/* ****************************** CARD SECTION ****************************** */
+
+.card {
+  display: grid;
+  gap: 10px;
+  text-align: $text--center;
+  color: $white;
+  margin-top: em(30px);
+
+  @media #{$break--m} {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 $gutters;
+  }
+
+  @include e(wrapper) {
+    position: relative;
+    height: 100%;
+  }
+
+  @include e(split-wrapper) {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+  }
+
+  @include e(content) {
+    background-color: $black;
+    padding-top: em(40px);
+    cursor: $cursor;
+
+    @include m(background) {
+      background: $airpod-pro--background
+        url('#{$path--rel}/airpods_pro_small.png') center no-repeat;
+      background-size: cover;
+      height: 548px;
+
+      @media #{$break--m} {
+        background-image: url('#{$path--rel}/airpods_pro_med.png');
+        height: initial;
+      }
+
+      @media #{$break--l} {
+        background-image: url('#{$path--rel}/airpods_pro_large.png');
+      }
+    }
+
+    @include m(bck) {
+      background-color: $whisper;
+    }
+
+    @include m(wallpaper) {
+      background: $promo--background url('../images/promo_tile_small.png')
+        center no-repeat;
+      background-size: cover;
+      height: 465px;
+
+      @media #{$break--m} {
+        height: initial;
+        background-image: url('../images/promo_tile_med.png');
+      }
+
+      @media #{$break--l} {
+        background-image: url('../images/promo_tile_large.png');
+      }
+    }
+  }
+
+  @include e(header) {
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: $font-weight--medium;
+
+    @media #{$break--m} {
+      @include m(pt) {
+        padding-top: 25px;
+      }
+    }
+
+    @media #{$break--l} {
+      font-size: 2.5rem;
+    }
+
+    @include m(capitalize) {
+      text-transform: capitalize;
+    }
+
+    @include m(lowercase) {
+      text-transform: lowercase;
+    }
+
+    @include m(col) {
+      color: $black;
+    }
+  }
+
+  @include e(subhead) {
+    font-size: 1.1875rem;
+    font-weight: $font-weight--light;
+    padding: 0 $gutters;
+
+    @media #{$break--l} {
+      font-size: 1.3125rem;
+    }
+
+    @include m(col) {
+      color: $black;
+    }
+
+    @include m(y) {
+      transform: translateY(14px);
+    }
+  }
+
+  p {
+    color: #d12d38;
+    text-transform: uppercase;
+    font-weight: $font-weight--medium;
+    margin-bottom: 15px;
+  }
+}
+
+/* ******************************* CARD IMAGE ******************************* */
+
+.logo-image-tv {
+  background: url('#{$path--rel}/tv_title_med.png') center no-repeat;
+  background-size: 200px;
+  height: 75px;
+
+  @media #{$break--m} {
+    background-size: 256px;
+    height: 83px;
+  }
+}
+
+.apple-watch {
+  background: url('#{$path--rel}/apple_watch_small.png') center no-repeat;
+  background-size: 207px;
+  height: 333px;
+  margin-top: $mt;
+
+  @media #{$break--m} {
+    background-size: 240px;
+    height: 380px;
+  }
+}
+
+.macbook-air {
+  background: url('#{$path--rel}/macbook_air_small.png') center no-repeat;
+  background-size: 350px;
+  height: 333px;
+  margin-top: $mt;
+
+  @media #{$break--m} {
+    background-size: 516px;
+    transform: translateY(65px);
+  }
+
+  @media #{$break--l} {
+    background-size: 575px;
+  }
+}
+
+.apple-fitness {
+  background: url('../images/apple_fitness_small.png') center left no-repeat;
+  background-size: 700px;
+  height: 420px;
+
+  @media #{$break--l} {
+    background: url('../images/apple_fitness_large.png') center left 110px
+      no-repeat;
+    background-size: 730px;
+  }
+}
+
+.apple-one {
+  background: url('../images/tile_apple_one_small.png') center no-repeat;
+  background-size: 346px;
+  height: 300px;
+
+  @media #{$break--m} {
+    background-image: url('../images/tile_apple_one_med.png');
+    background-size: 450px;
+    height: 450px;
+  }
+
+  @media #{$break--l} {
+    background-image: url('../images/tile_apple_one_large.png');
+    background-size: 600px;
+  }
+}

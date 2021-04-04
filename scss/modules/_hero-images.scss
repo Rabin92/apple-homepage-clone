@@ -1,0 +1,57 @@
+// ==========================================================================
+// Hero Images
+// ==========================================================================
+
+.iphone-12-image {
+  background: url('#{$path--rel}/iphone_12_small.png') center no-repeat;
+  background-size: 300px;
+  height: 275px;
+  margin-top: $mt;
+
+  @media #{$break--m} {
+    background: url('#{$path--rel}/iphone_12_med.png') center no-repeat;
+    background-size: 675px;
+    height: 450px;
+  }
+
+  @media #{$break--l} {
+    background-position: center bottom -100px;
+    height: 360px;
+  }
+}
+
+.iphone-12-pro-image {
+  background: url('#{$path--rel}/iphone_12_pro_small.png') center no-repeat;
+  background-size: 300px;
+  height: 275px;
+  margin-top: em(50px);
+
+  @media #{$break--m} {
+    background: url('#{$path--rel}/iphone_12_pro_med.png') center no-repeat;
+    height: 400px;
+    background-size: 800px;
+  }
+
+  @media #{$break--l} {
+    height: 500px;
+    background-size: 1000px;
+  }
+}
+
+.ipad-air-image {
+  background: url('#{$path--rel}/ipad_air_small.png') center no-repeat;
+  background-size: 220px;
+  height: 400px;
+
+  @media #{$break--m} {
+    background: url('#{$path--rel}/ipad_air_med.png') center no-repeat;
+    height: 300px;
+    background-size: 750px;
+    margin-top: em(50px);
+  }
+
+  @media #{$break--l} {
+    height: 400px;
+    background-size: 900px;
+  }
+}

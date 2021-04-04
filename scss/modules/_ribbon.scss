@@ -1,0 +1,19 @@
+// ==========================================================================
+// Ribbon
+// ==========================================================================
+
+.ribbon {
+  background-color: $ribbon--col;
+  padding: em(12px) em(24px);
+  font-size: 0.875rem;
+  text-align: $text--center;
+
+  > a {
+    color: #06c;
+    display: inline-block;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

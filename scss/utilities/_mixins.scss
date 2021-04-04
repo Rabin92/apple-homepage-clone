@@ -1,0 +1,32 @@
+// ==========================================================================
+// Mixins
+// ==========================================================================
+
+// BEM selectors
+
+@mixin e($element) {
+  &__#{$element} {
+    @content;
+  }
+}
+@mixin m($modifier) {
+  &--#{$modifier} {
+    @content;
+  }
+}
+
+@mixin border {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: $border-line;
+}
+
+// Flex
+@mixin flexy($dsp: flex, $f-dir: null, $j-content: null, $a-items: center) {
+  display: $dsp;
+  flex-direction: $f-dir;
+  justify-content: $j-content;
+  align-items: $a-items;
+}
