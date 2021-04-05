@@ -38,6 +38,7 @@
 - Visual Studio Code
 - Git
 - GitHub
+- Chrome DevTools
 
 ### Project Description
 
