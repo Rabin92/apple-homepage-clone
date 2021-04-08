@@ -1,0 +1,71 @@
+// ==========================================================================
+// Card Images
+// ==========================================================================
+
+.logo-image-tv {
+  background: url('#{$path--rel}/tv_title_med.png') center no-repeat;
+  background-size: 200px;
+  height: 75px;
+
+  @media #{$break--m} {
+    background-size: 256px;
+    height: 83px;
+  }
+}
+
+.apple-watch {
+  background: url('#{$path--rel}/apple_watch_small.png') center no-repeat;
+  background-size: 207px;
+  height: 333px;
+  margin-top: $mt;
+
+  @media #{$break--m} {
+    background-size: 240px;
+    height: 380px;
+  }
+}
+
+.ipad-air {
+  background: url('#{$path--rel}/ipad_air_small.png') center no-repeat;
+  background-size: 700px;
+  height: 380px;
+
+  @media #{$break--m} {
+    background-image: url('#{$path--rel}/ipad_air_med.png');
+    background-size: 500px;
+  }
+
+  @media #{$break--l} {
+    background-image: url('#{$path--rel}/ipad_air_large.png');
+    background-size: 1200px;
+  }
+}
+
+.apple-fitness {
+  background: url('../images/apple_fitness_small.png') center left no-repeat;
+  background-size: 700px;
+  height: 420px;
+
+  @media #{$break--l} {
+    background: url('../images/apple_fitness_large.png') center left 110px
+      no-repeat;
+    background-size: 730px;
+  }
+}
+
+.apple-one {
+  background: url('../images/tile_apple_one_small.png') center no-repeat;
+  background-size: 346px;
+  height: 300px;
+
+  @media #{$break--m} {
+    background-image: url('../images/tile_apple_one_med.png');
+    background-size: 450px;
+    height: 450px;
+  }
+
+  @media #{$break--l} {
+    background-image: url('../images/tile_apple_one_large.png');
+    background-size: 600px;
+  }
+}
