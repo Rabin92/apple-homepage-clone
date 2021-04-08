@@ -312,6 +312,7 @@ button {
 
 ion-icon {
   pointer-events: none;
+  font-size: 0.85em;
 }
 
 .icon {
@@ -534,22 +535,34 @@ input[type=text] {
 /* ********************************** HERO ********************************** */
 .hero {
   text-align: center;
+}
+.hero + .hero {
   margin-top: 0.9375em;
+}
+.hero--arcade-background {
+  background: url("../images/arcade_small.png") bottom 30px center no-repeat;
+  background-size: 720px;
+  height: 550px;
+}
+@media (min-width: 45.9375em) {
+  .hero--arcade-background {
+    background-image: url("../images/arcade_med.png");
+    background-size: 1068px;
+    height: 694px;
+  }
+}
+@media (min-width: 64em) {
+  .hero--arcade-background {
+    background-image: url("../images/arcade_large.png");
+    background-size: 3008px;
+    height: 624px;
+  }
 }
 .hero--background {
   background-color: #000;
 }
 .hero__content {
   margin-top: 1.875em;
-}
-.hero__content--reverse {
-  display: flex;
-  flex-direction: column-reverse;
-}
-@media (min-width: 45.9375em) {
-  .hero__content--reverse {
-    flex-direction: column;
-  }
 }
 .hero__headline {
   font-size: 2rem;
@@ -558,14 +571,6 @@ input[type=text] {
 }
 .hero__headline--col {
   color: #fff;
-}
-.hero__headline--display {
-  display: none;
-}
-@media (min-width: 45.9375em) {
-  .hero__headline--display {
-    display: block;
-  }
 }
 @media (min-width: 45.9375em) {
   .hero__headline {
@@ -576,6 +581,9 @@ input[type=text] {
   .hero__headline {
     font-size: 3.5rem;
   }
+}
+.hero__headline--logo-font {
+  font-size: 2em;
 }
 .hero__subhead {
   font-size: 1.1875rem;
@@ -594,6 +602,26 @@ input[type=text] {
     font-size: 1.75rem;
   }
 }
+.hero__subhead--font {
+  font-size: 2rem;
+  line-height: 1.125;
+  letter-spacing: 0.004em;
+  font-weight: 500;
+}
+@media (min-width: 45.9375em) {
+  .hero__subhead--font {
+    font-size: 3rem;
+    line-height: 1.08349;
+    letter-spacing: -0.002em;
+  }
+}
+@media (min-width: 64em) {
+  .hero__subhead--font {
+    font-size: 3.5rem;
+    line-height: 1.07143;
+    letter-spacing: -0.005em;
+  }
+}
 .hero__price {
   font-size: 1.0625rem;
   font-weight: 400;
@@ -610,8 +638,12 @@ input[type=text] {
 .cta--links {
   margin-top: 1.25em;
 }
-.cta--links .dark-theme-link {
+.cta--links--mt {
+  margin-top: 0.625em;
+}
+.cta--links .hero-link-font {
   font-size: 1.3125em;
+  font-weight: 300;
 }
 .cta--links .dark-theme-link-col {
   color: #2997ff;
@@ -621,6 +653,7 @@ input[type=text] {
   font-size: 1.0625rem;
   font-weight: 400;
   line-height: 1.21053;
+  letter-spacing: 0.011em;
 }
 .cta--links > a::after {
   content: ">";
@@ -661,7 +694,7 @@ input[type=text] {
   gap: 10px;
   text-align: center;
   color: #fff;
-  margin-top: 1.875em;
+  margin-top: 0.75em;
 }
 @media (min-width: 45.9375em) {
   .card {
@@ -683,6 +716,19 @@ input[type=text] {
   padding-top: 2.5em;
   cursor: pointer;
 }
+.card__content--light {
+  background-color: #fbfbfd;
+}
+.card__content--flex {
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 2em 0;
+}
+@media (min-width: 64em) {
+  .card__content--flex {
+    display: initial;
+  }
+}
 .card__content--background {
   background: #c0c9ba url("../images/airpods_pro_small.png") center no-repeat;
   background-size: cover;
@@ -698,9 +744,6 @@ input[type=text] {
   .card__content--background {
     background-image: url("../images/airpods_pro_large.png");
   }
-}
-.card__content--bck {
-  background-color: #fbfbfd;
 }
 .card__content--wallpaper {
   background: #aba79c url("../images/promo_tile_small.png") center no-repeat;
@@ -742,6 +785,15 @@ input[type=text] {
 .card__header--col {
   color: #000;
 }
+.card__header--display {
+  display: none;
+}
+@media (min-width: 64em) {
+  .card__header--display {
+    display: block;
+    text-transform: none;
+  }
+}
 .card__subhead {
   font-size: 1.1875rem;
   font-weight: 300;
@@ -765,7 +817,46 @@ input[type=text] {
   margin-bottom: 15px;
 }
 
-/* ******************************* CARD IMAGE ******************************* */
+.iphone-12-image {
+  background: url("../images/iphone_12_small.png") center no-repeat;
+  background-size: 300px;
+  height: 275px;
+  margin-top: 20px;
+}
+@media (min-width: 45.9375em) {
+  .iphone-12-image {
+    background-image: url("../images/iphone_12_med.png");
+    background-size: 675px;
+    height: 450px;
+  }
+}
+@media (min-width: 64em) {
+  .iphone-12-image {
+    background-position: center bottom -100px;
+    height: 360px;
+  }
+}
+
+.iphone-12-pro-image {
+  background: url("../images/iphone_12_pro_small.png") center no-repeat;
+  background-size: 300px;
+  height: 275px;
+  margin-top: 3.125em;
+}
+@media (min-width: 45.9375em) {
+  .iphone-12-pro-image {
+    background-image: url("../images/iphone_12_pro_med.png");
+    height: 400px;
+    background-size: 800px;
+  }
+}
+@media (min-width: 64em) {
+  .iphone-12-pro-image {
+    height: 500px;
+    background-size: 1000px;
+  }
+}
+
 .logo-image-tv {
   background: url("../images/tv_title_med.png") center no-repeat;
   background-size: 200px;
@@ -791,21 +882,21 @@ input[type=text] {
   }
 }
 
-.macbook-air {
-  background: url("../images/macbook_air_small.png") center no-repeat;
-  background-size: 350px;
-  height: 333px;
-  margin-top: 20px;
+.ipad-air {
+  background: url("../images/ipad_air_small.png") center no-repeat;
+  background-size: 700px;
+  height: 380px;
 }
 @media (min-width: 45.9375em) {
-  .macbook-air {
-    background-size: 516px;
-    transform: translateY(65px);
+  .ipad-air {
+    background-image: url("../images/ipad_air_med.png");
+    background-size: 500px;
   }
 }
 @media (min-width: 64em) {
-  .macbook-air {
-    background-size: 575px;
+  .ipad-air {
+    background-image: url("../images/ipad_air_large.png");
+    background-size: 1200px;
   }
 }
 
@@ -837,66 +928,6 @@ input[type=text] {
   .apple-one {
     background-image: url("../images/tile_apple_one_large.png");
     background-size: 600px;
-  }
-}
-
-.iphone-12-image {
-  background: url("../images/iphone_12_small.png") center no-repeat;
-  background-size: 300px;
-  height: 275px;
-  margin-top: 20px;
-}
-@media (min-width: 45.9375em) {
-  .iphone-12-image {
-    background: url("../images/iphone_12_med.png") center no-repeat;
-    background-size: 675px;
-    height: 450px;
-  }
-}
-@media (min-width: 64em) {
-  .iphone-12-image {
-    background-position: center bottom -100px;
-    height: 360px;
-  }
-}
-
-.iphone-12-pro-image {
-  background: url("../images/iphone_12_pro_small.png") center no-repeat;
-  background-size: 300px;
-  height: 275px;
-  margin-top: 3.125em;
-}
-@media (min-width: 45.9375em) {
-  .iphone-12-pro-image {
-    background: url("../images/iphone_12_pro_med.png") center no-repeat;
-    height: 400px;
-    background-size: 800px;
-  }
-}
-@media (min-width: 64em) {
-  .iphone-12-pro-image {
-    height: 500px;
-    background-size: 1000px;
-  }
-}
-
-.ipad-air-image {
-  background: url("../images/ipad_air_small.png") center no-repeat;
-  background-size: 220px;
-  height: 400px;
-}
-@media (min-width: 45.9375em) {
-  .ipad-air-image {
-    background: url("../images/ipad_air_med.png") center no-repeat;
-    height: 300px;
-    background-size: 750px;
-    margin-top: 3.125em;
-  }
-}
-@media (min-width: 64em) {
-  .ipad-air-image {
-    height: 400px;
-    background-size: 900px;
   }
 }
 
