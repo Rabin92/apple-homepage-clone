@@ -4,7 +4,7 @@
 
 .main {
   cursor: $cursor;
-  background-color: #fbfbfd;
+  background-color: $whisper;
 
   @include flexy($a-items: null, $j-content: center, $f-dir: column);
 }
@@ -271,7 +271,7 @@
   }
 
   p {
-    color: #d12d38;
+    color: $persianRed;
     text-transform: uppercase;
     font-weight: $font-weight--medium;
     margin-bottom: 15px;
