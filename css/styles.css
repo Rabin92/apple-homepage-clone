@@ -826,6 +826,18 @@ input[type=text] {
   }
 }
 
+.logo-image-tv {
+  background: url("../images/tv_title_med.png") center no-repeat;
+  background-size: 200px;
+  height: 75px;
+}
+@media (min-width: 45.9375em) {
+  .logo-image-tv {
+    background-size: 256px;
+    height: 83px;
+  }
+}
+
 .apple-watch {
   background: url("../images/apple_watch_small.png") center no-repeat;
   background-size: 207px;
