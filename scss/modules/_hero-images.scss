@@ -2,6 +2,24 @@
 // Hero Images
 // ==========================================================================
 
+.arcade-background {
+  background: url('#{$path--rel}/arcade_small.png') bottom 30px center no-repeat;
+  background-size: 720px;
+  height: 550px;
+
+  @media #{$break--m} {
+    background-image: url('#{$path--rel}/arcade_med.png');
+    background-size: 1068px;
+    height: 694px;
+  }
+
+  @media #{$break--l} {
+    background-image: url('#{$path--rel}/arcade_large.png');
+    background-size: 3008px;
+    height: 624px;
+  }
+}
+
 .iphone-12-image {
   background: url('#{$path--rel}/iphone_12_small.png') center no-repeat;
   background-size: 300px;

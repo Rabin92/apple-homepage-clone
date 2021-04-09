@@ -2,17 +2,6 @@
 // Card Images
 // ==========================================================================
 
-.logo-image-tv {
-  background: url('#{$path--rel}/tv_title_med.png') center no-repeat;
-  background-size: 200px;
-  height: 75px;
-
-  @media #{$break--m} {
-    background-size: 256px;
-    height: 83px;
-  }
-}
-
 .apple-watch {
   background: url('#{$path--rel}/apple_watch_small.png') center no-repeat;
   background-size: 207px;
@@ -41,31 +30,63 @@
   }
 }
 
+.airpod-pro {
+  background: $airpod-pro--background url('#{$path--rel}/airpods_pro_small.png')
+    center no-repeat;
+  background-size: cover;
+  height: 548px;
+
+  @media #{$break--m} {
+    background-image: url('#{$path--rel}/airpods_pro_med.png');
+    height: initial;
+  }
+
+  @media #{$break--l} {
+    background-image: url('#{$path--rel}/airpods_pro_large.png');
+  }
+}
+
 .apple-fitness {
-  background: url('../images/apple_fitness_small.png') center left no-repeat;
+  background: url('#{$path--rel}/apple_fitness_small.png') center left no-repeat;
   background-size: 700px;
   height: 420px;
 
   @media #{$break--l} {
-    background: url('../images/apple_fitness_large.png') center left 110px
+    background: url('#{$path--rel}/apple_fitness_large.png') center left 110px
       no-repeat;
     background-size: 730px;
   }
 }
 
+.apple-tv {
+  background: $promo--background url('#{$path--rel}/promo_tile_small.png')
+    center no-repeat;
+  background-size: cover;
+  height: 465px;
+
+  @media #{$break--m} {
+    height: initial;
+    background-image: url('#{$path--rel}/promo_tile_med.png');
+  }
+
+  @media #{$break--l} {
+    background-image: url('#{$path--rel}/promo_tile_large.png');
+  }
+}
+
 .apple-one {
-  background: url('../images/tile_apple_one_small.png') center no-repeat;
+  background: url('#{$path--rel}/tile_apple_one_small.png') center no-repeat;
   background-size: 346px;
   height: 300px;
 
   @media #{$break--m} {
-    background-image: url('../images/tile_apple_one_med.png');
+    background-image: url('#{$path--rel}/tile_apple_one_med.png');
     background-size: 450px;
     height: 450px;
   }
 
   @media #{$break--l} {
-    background-image: url('../images/tile_apple_one_large.png');
+    background-image: url('#{$path--rel}/tile_apple_one_large.png');
     background-size: 600px;
   }
 }
