@@ -3,13 +3,29 @@
 // ==========================================================================
 
 .logo-image-tv {
-  background: url('#{$path--rel}/tv_title_med.png') center no-repeat;
+  background: url('#{$path--rel}/tv_tile.png') center no-repeat;
   background-size: 200px;
   height: 75px;
 
   @media #{$break--m} {
     background-size: 256px;
     height: 83px;
+  }
+}
+
+.apple-event {
+  background: url('#{$path--rel}/apple_event_small.png') center no-repeat;
+  background-size: 346px;
+  height: 460px;
+
+  @media #{$break--m} {
+    background-image: url('#{$path--rel}/apple_event_med.png');
+    background-size: 378px;
+  }
+
+  @media #{$break--l} {
+    background-image: url('#{$path--rel}/apple_event_large.png');
+    background-size: 558px;
   }
 }
 
@@ -38,22 +54,6 @@
   @media #{$break--l} {
     background-image: url('#{$path--rel}/ipad_air_large.png');
     background-size: 1200px;
-  }
-}
-
-.airpod-pro {
-  background: $airpod-pro--background url('#{$path--rel}/airpods_pro_small.png')
-    center no-repeat;
-  background-size: cover;
-  height: 548px;
-
-  @media #{$break--m} {
-    background-image: url('#{$path--rel}/airpods_pro_med.png');
-    height: initial;
-  }
-
-  @media #{$break--l} {
-    background-image: url('#{$path--rel}/airpods_pro_large.png');
   }
 }
 
