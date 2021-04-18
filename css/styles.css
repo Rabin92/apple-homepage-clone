@@ -715,11 +715,6 @@ input[type=text] {
   font-size: 2rem;
   font-weight: 500;
 }
-@media (min-width: 45.9375em) {
-  .card__header--pt {
-    padding-top: 25px;
-  }
-}
 @media (min-width: 64em) {
   .card__header {
     font-size: 2.5rem;
@@ -827,7 +822,7 @@ input[type=text] {
 }
 
 .logo-image-tv {
-  background: url("../images/tv_title_med.png") center no-repeat;
+  background: url("../images/tv_tile.png") center no-repeat;
   background-size: 200px;
   height: 75px;
 }
@@ -835,6 +830,24 @@ input[type=text] {
   .logo-image-tv {
     background-size: 256px;
     height: 83px;
+  }
+}
+
+.apple-event {
+  background: url("../images/apple_event_small.png") center no-repeat;
+  background-size: 346px;
+  height: 460px;
+}
+@media (min-width: 45.9375em) {
+  .apple-event {
+    background-image: url("../images/apple_event_med.png");
+    background-size: 378px;
+  }
+}
+@media (min-width: 64em) {
+  .apple-event {
+    background-image: url("../images/apple_event_large.png");
+    background-size: 558px;
   }
 }
 
@@ -866,23 +879,6 @@ input[type=text] {
   .ipad-air {
     background-image: url("../images/ipad_air_large.png");
     background-size: 1200px;
-  }
-}
-
-.airpod-pro {
-  background: #c0c9ba url("../images/airpods_pro_small.png") center no-repeat;
-  background-size: cover;
-  height: 548px;
-}
-@media (min-width: 45.9375em) {
-  .airpod-pro {
-    background-image: url("../images/airpods_pro_med.png");
-    height: initial;
-  }
-}
-@media (min-width: 64em) {
-  .airpod-pro {
-    background-image: url("../images/airpods_pro_large.png");
   }
 }
 
