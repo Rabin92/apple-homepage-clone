@@ -220,12 +220,6 @@
     font-size: 2rem;
     font-weight: $font-weight--medium;
 
-    @media #{$break--m} {
-      @include m(pt) {
-        padding-top: 25px;
-      }
-    }
-
     @media #{$break--l} {
       font-size: 2.5rem;
     }
